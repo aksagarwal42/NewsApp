@@ -1,16 +1,39 @@
-# conmetlabs_news
+# Packages Used 
+### 1. Animated Splash Screen 
+Animated Splash Screen is a Flutter package for making beautiful and customizable splash screens 
 
-A new Flutter project.
+**Installation**
+```bash
+flutter pub add animated_splash_screen
+```
 
-## Getting Started
+### 2. Google Fonts
+Google Fonts is a Flutter package which gives us all the google fonts available to use in our project .
 
-This project is a starting point for a Flutter application.
+**Installation**
+```bash
+flutter pub add google_fonts
+```
 
-A few resources to get you started if this is your first Flutter project:
+### 3. HTTP
+HTTP is a Flutter package for making API calls around the internet 
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+**Installation**
+```bash
+flutter pub add http
+```
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 4. Url Launcher 
+URL Launcher is a Flutter package for redirecting to websites 
+
+**Installation**
+```bash
+flutter pub add url_launcher
+```
+
+# Screens
+### 1. Home Screen 
+Displays the latest & breaking news to the user . 
+
+### 2. Discover Screen 
+Contains Tabs to filter the news accordingly , eg: Entertainment News, Sports News , etc.
