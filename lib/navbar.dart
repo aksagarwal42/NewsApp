@@ -1,8 +1,8 @@
-import 'package:conmetlabs_news/homepage.dart';
-import 'package:conmetlabs_news/search.dart';
+import 'package:conmetlabs_news/screens/homepage.dart';
+import 'package:conmetlabs_news/screens/search.dart';
 import 'package:flutter/material.dart';
 
-import 'discover.dart';
+import 'screens/discover.dart';
 
 class NavigationBarPage extends StatefulWidget {
   const NavigationBarPage({Key? key}) : super(key: key);
@@ -36,11 +36,15 @@ class _NavigationBarPageState extends State<NavigationBarPage> {
           elevation: 0.0,
           items: [
             BottomNavigationBarItem(
-              icon: _selectedIndex == 0 ? Icon(Icons.home) : Icon(Icons.home_outlined),
+              icon: _selectedIndex == 0
+                  ? Icon(Icons.home)
+                  : Icon(Icons.home_outlined),
               label: 'Home',
             ),
             BottomNavigationBarItem(
-              icon: _selectedIndex == 1 ? ImageIcon(AssetImage('assets/images/globe_filled.png')) : ImageIcon(AssetImage('assets/images/globe.png')),
+              icon: _selectedIndex == 1
+                  ? ImageIcon(AssetImage('assets/images/globe_filled.png'))
+                  : ImageIcon(AssetImage('assets/images/globe.png')),
               label: 'Discover',
             ),
             BottomNavigationBarItem(

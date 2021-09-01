@@ -1,11 +1,14 @@
-import 'package:conmetlabs_news/search.dart';
+import 'package:conmetlabs_news/screens/search.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'discover.dart';
-import 'homepage.dart';
-import 'splash.dart';
+import 'screens/discover.dart';
+import 'screens/homepage.dart';
+import 'screens/splash.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(NewsApp());
 }
 

@@ -1,4 +1,5 @@
 import 'package:conmetlabs_news/searched_news.dart';
+import 'package:conmetlabs_news/widgets/button.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -89,22 +90,13 @@ class _SearchState extends State<Search> {
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Padding(
+                Button(
+                  text: 'Search',
                   padding: const EdgeInsets.only(right: 10),
-                  child: ElevatedButton(
-                    onPressed: () {
-                      FocusScope.of(context).unfocus();
-                      displaySearchedResults = _updateDisplay(controller.text);
-                    },
-                    child: Text(
-                      'Search',
-                      style: GoogleFonts.robotoSlab(
-                          fontWeight: FontWeight.bold, color: Colors.white),
-                    ),
-                    style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all(Color(0xff000000))),
-                  ),
+                  onPressed: () {
+                    FocusScope.of(context).unfocus();
+                    displaySearchedResults = _updateDisplay(controller.text);
+                  },
                 )
               ],
             ),
