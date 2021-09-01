@@ -37,3 +37,8 @@ Displays the latest & breaking news to the user .
 
 ### 2. Discover Screen 
 Contains Tabs to filter the news accordingly , eg: Entertainment News, Sports News , etc.
+
+### 3. Search Screen
+Users can search news by typing keywords in the search box and articles are shown to them in reverse sorted chronological order.
+
+Deployed app link - [onedrive link](https://1drv.ms/u/s!Aor537KymUg8qEqnIfXsR8cyTa52?e=nH81d7)
