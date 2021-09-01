@@ -1,4 +1,5 @@
 import 'package:conmetlabs_news/homepage.dart';
+import 'package:conmetlabs_news/search.dart';
 import 'package:flutter/material.dart';
 
 import 'discover.dart';
@@ -16,6 +17,7 @@ class _NavigationBarPageState extends State<NavigationBarPage> {
   final List<Widget> _widgets = <Widget>[
     HomePage(),
     DiscoverPage(),
+    Search(),
   ];
 
   @override
@@ -30,7 +32,6 @@ class _NavigationBarPageState extends State<NavigationBarPage> {
           currentIndex: _selectedIndex,
           unselectedItemColor: Colors.blueGrey[300],
           showUnselectedLabels: false,
-          // selectedIconTheme: ,
           selectedItemColor: Colors.black,
           elevation: 0.0,
           items: [
@@ -39,8 +40,12 @@ class _NavigationBarPageState extends State<NavigationBarPage> {
               label: 'Home',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.search),
+              icon: _selectedIndex == 1 ? ImageIcon(AssetImage('assets/images/globe_filled.png')) : ImageIcon(AssetImage('assets/images/globe.png')),
               label: 'Discover',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.search),
+              label: 'Search',
             )
           ],
           onTap: (index) {

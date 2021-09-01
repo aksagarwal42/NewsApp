@@ -3,39 +3,32 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class TabNews extends StatefulWidget {
-  final String category;
+class SearchedNews extends StatefulWidget {
+  final String query;
 
-  const TabNews({required this.category});
+  const SearchedNews({required this.query});
   @override
-  _TabNewsState createState() => _TabNewsState();
+  _SearchedNewsState createState() => _SearchedNewsState();
 }
 
-class _TabNewsState extends State<TabNews> {
-  late Future<nd.NewsData> data;
+class _SearchedNewsState extends State<SearchedNews> {
 
   void _launchURL(String _url) async => await canLaunch(_url)
       ? await launch(_url)
       : throw 'Could not launch $_url';
 
   @override
-  void initState() {
-    super.initState();
-    data = nd.getNewsArticles('/top-headlines?category=${widget.category}');
-  }
-
-  @override
   Widget build(BuildContext context) {
+    print('build');
     return FutureBuilder<nd.NewsData>(
-        future: data,
+        future: nd.getNewsArticles('/everything?q=${widget.query}&sortby=publishedAt'),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
             return RefreshIndicator(
               onRefresh: () {
                 return Future.delayed(Duration(seconds: 3), () {
                   setState(() {
-                    data = nd.getNewsArticles(
-                        '/top-headlines?category=${widget.category}');
+                    nd.getNewsArticles('/everything?q=${widget.query}');
                   });
                 });
               },

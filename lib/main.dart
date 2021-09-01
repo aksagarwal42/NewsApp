@@ -1,3 +1,4 @@
+import 'package:conmetlabs_news/search.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'discover.dart';
@@ -22,6 +23,7 @@ class NewsApp extends StatelessWidget {
         '/': (context) => SplashScreen(),
         '/home': (context) => HomePage(),
         '/discover': (context) => DiscoverPage(),
+        '/search': (context) => Search(),
       },
     );
   }

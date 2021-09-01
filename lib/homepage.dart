@@ -38,7 +38,6 @@ class _HomePageState extends State<HomePage> {
                   onTap: () => _launchURL(snapshot.data!.newsArticles[0]["url"]),
                   child: Container(
                     decoration: BoxDecoration(
-                      // color: Colors.black,
                       image: snapshot.data!.newsArticles[0]["urlToImage"] !=
                               null
                           ? DecorationImage(

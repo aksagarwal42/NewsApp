@@ -11,7 +11,6 @@ class SplashScreen extends StatelessWidget {
     return AnimatedSplashScreen(
       splash: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
-        // crossAxisAlignment: CrossAxisAlignment.stretch,
         mainAxisSize: MainAxisSize.max,
         children: [
           Container(),
