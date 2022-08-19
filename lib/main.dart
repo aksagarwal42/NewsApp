@@ -20,7 +20,7 @@ class NewsApp extends StatelessWidget {
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
     ]);
-    // adding a test comment
+    // adding a test commentnfjdhfjdhfjdh
     return MaterialApp(
       initialRoute: '/',
       routes: {
